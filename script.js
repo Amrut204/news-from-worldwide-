@@ -46,7 +46,7 @@ try {
 function loadNews(subject){
   
     
-fetch(API_KEY).then(res=>res.json())
+fetch("https://newsdata.io/api/1/latest?apikey=pub_3fbdb77a6f1c4b38bebdd3b416e75e85&q=${subject}").then(res=>res.json())
 .then(data=>{
  
     console.log(data.results[0].title);
